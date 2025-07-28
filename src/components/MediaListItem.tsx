@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getCommentReply } from "../firebase/ManageCommentAutomation";
 
 interface individualMedia{
@@ -16,14 +16,13 @@ function MediaListItem(individualmedia:individualMedia){
     const media=individualmedia.media
     const [isOpen,setOpen]=useState(false)
     const [commentDict,setCommentDict]=useState({commentReplyButtonText: '', FollowText: '', commentReplyButtonUrl: '', commentReplyText: '',FollowButtonText:'',isFollowMust:true,keyword:''})
-    const [isChecked,setChecked]=useState(false)
     const handleDropdownClick=async()=>{
         setOpen(!isOpen)
         const comment=await getCommentReply(media.id,individualmedia.user_id) as { commentReplyButtonText: string }
         setCommentDict(prev=>({...prev,...comment}))
     }
     const handleCommentSave=()=>{
-        setCommentDict(prev=>({...prev,'isFollowMust':isChecked}));
+        setCommentDict(prev=>({...prev,'isFollowMust':commentDict.isFollowMust}));
         individualmedia.onSave(commentDict,media.id)
     }
     const handleChange=(event:React.ChangeEvent)=>{

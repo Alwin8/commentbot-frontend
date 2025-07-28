@@ -15,7 +15,6 @@ async function GetMedia(token:string,page:string){
     .then(async response => {
         if (!response.ok) throw new Error("Network response was not ok");
         const data:{'data':[],'paging':{cursors:{after:'',before:''}}}=await response.json()
-        console.log(data)
         return data // read response body
     })
 

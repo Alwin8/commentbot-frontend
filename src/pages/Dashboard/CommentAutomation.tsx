@@ -16,11 +16,8 @@ function CommentAutomation(props: Props) {
     const run = async () => {
       if(!isLoading){
       setLoading(true);
-      console.log("run")
       const media = await GetMedia(props.token, page[pageNo - 1]);
-      console.log(media)
       setMediaList(media.data);
-      console.log("after run")
       const after: string = media.paging.cursors["after"];
       setPage((prev) => [...prev, after]);
       setLoading(false);
