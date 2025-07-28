@@ -1,5 +1,6 @@
 async function GetMedia(token:string,page:string){
-    const ApiUrl="https://637lnk48-5000.inc1.devtunnels.ms/api/getMedia"
+    const backend=import.meta.env.VITE_BACKEND
+    const ApiUrl=backend+"/api/getMedia"
     return await fetch(ApiUrl,{
         method: 'POST',
         headers: 

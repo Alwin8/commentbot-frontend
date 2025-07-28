@@ -1,5 +1,6 @@
 async function makeToken(code:string){
-    const ApiUrl="https://637lnk48-5000.inc1.devtunnels.ms/api/connectinstagram"
+    const backend=import.meta.env.VITE_BACKEND
+    const ApiUrl=backend+"/api/connectinstagram"
     return fetch(ApiUrl,{
         method: 'POST',
         headers: 
