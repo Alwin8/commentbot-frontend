@@ -1,0 +1,5 @@
+.header:hover{
+  /* color: #007bff; or any hover color */
+  background-color: #e5e5e5;
+  border-bottom: 2px solid #007bff;
+}

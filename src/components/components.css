@@ -1,0 +1,15 @@
+#progressbar {
+  width: 45px;
+  height: 45px;
+  animation: spin 1s infinite;
+  margin: 50px auto; /* center on page */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.form-text{
+  text-align: left;
+}

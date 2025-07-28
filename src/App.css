@@ -1,0 +1,36 @@
+#root {
+  max-width: 1280px;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.fullviewport{
+  width:100vw;
+  height: 100vh;
+}
+.pageviewport{
+  width:90vw;
+  height: 90vh;
+}
+
+.logo{
+  width:24px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.potrait{
+  width: 70px;
+  height: fit-content;
+  background-color: transparent;
+}
