@@ -7,7 +7,7 @@ function SignInWithGoogle(PROPS:Props){
     const handleSignIn=async()=>
         {
             try {
-                const result = await signInWithPopup(auth, googleProvider);
+                await signInWithPopup(auth, googleProvider);
                 PROPS.onSignIn()
                 
             } catch (error) {

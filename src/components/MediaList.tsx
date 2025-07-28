@@ -1,4 +1,3 @@
-import { useState } from "react";
 import MediaListItem from "./MediaListItem";
 interface Media {
     caption: string;
@@ -16,7 +15,7 @@ interface Props{
 function MediaList(props:Props){
     return (
         <div className="container">
-            {props.list.map((media,index) => (
+            {props.list.map((media) => (
                 <MediaListItem media={media} user_id={props.user_id} onSave={(commentDict,media_id)=>props.onSave(commentDict,media_id)}></MediaListItem>
             ))}
         </div>
