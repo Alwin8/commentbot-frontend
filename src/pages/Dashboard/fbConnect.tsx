@@ -12,7 +12,7 @@ function FbConnect(props:Props){
         <div className="fullviewport d-grid justify-content-center">
         {!props.isAuthenticated && (<Progressbar></Progressbar>)}
             {!props.isFbConnected && props.isAuthenticated && (
-                <div className="card" style={{width:'30vw',height:'40vh'}}>
+                <div className="card w-auto" style={{height:'30vh'}}>
                     <h3>Connect your instagram</h3>
                     <br/>
                     <a href={fbRedirectLink}>
@@ -21,7 +21,7 @@ function FbConnect(props:Props){
                 </div>
             )}
             {props.isFbConnected && (
-                <div className="card" style={{width:'30vw',height:'40vh'}}>
+                <div className="card w-auto" style={{height:'30vh'}}>
                     <h3>Instagram Already connected</h3>
                     <br/>
                     <a href={fbRedirectLink}>

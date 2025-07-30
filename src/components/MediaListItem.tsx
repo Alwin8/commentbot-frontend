@@ -16,6 +16,7 @@ function MediaListItem(individualmedia:individualMedia){
     const media=individualmedia.media
     const [isOpen,setOpen]=useState(false)
     const [commentDict,setCommentDict]=useState({commentReplyButtonText: '', FollowText: '', commentReplyButtonUrl: '', commentReplyText: '',FollowButtonText:'',isFollowMust:true,keyword:''})
+    const isSmallPhone = window.innerWidth <= 480;
     const handleDropdownClick=async()=>{
         setOpen(!isOpen)
         const comment=await getCommentReply(media.id,individualmedia.user_id) as { commentReplyButtonText: string }
@@ -33,23 +34,23 @@ function MediaListItem(individualmedia:individualMedia){
     return (
         <div key={media.id}>
         <div className="row rounded-top bg-light p-2">
-                    <div className="col-1 d-flex justify-content-start align-items-center">
+                    <div className="col-auto d-flex justify-content-start align-items-center">
                         <img src={media.thumbnail_url} className="rounded potrait"></img>
                     </div>
                     <div className="col d-grid justify-content-start align-items-center">
                         <h6 className="mb-0" style={{height:'20px',overflow:'hidden'}}>{media.caption}</h6>
-                        <small className="mb-0">{media.timestamp}</small>
+                        <small className="mb-0" style={{height:'16px',overflow:'hidden'}}>{media.timestamp}</small>
                     </div>
-                    <div className="col-2 d-grid justify-content-end align-items-center">
+                    <div className="col-1 d-grid justify-content-end align-items-center">
                         <button style={{backgroundColor:'transparent'}} onClick={()=>handleDropdownClick()}>
                             <img src='https://img.icons8.com/?size=100&id=2760&format=png&color=000000' className="logo"></img>
                         </button>
                     </div>
         </div>
         <div className="row p-2">
-                    <div className="rounded-bottom" style={{backgroundColor:'bisque',height: isOpen ? "350px" : "0",transition: "height 0.5s ease",overflow: "hidden",}}>
+                    <div className="rounded-bottom" style={{backgroundColor:'bisque',height: isOpen ? (isSmallPhone ? "650px" : "350px") : "0",transition: "height 0.5s ease",overflow: "hidden",}}>
                       <div className="row">
-                        <div className="col-6">
+                        <div className="col-sm-6">
                             <form className="form-group px-1 pt-2 d-grid justify-content-start">
                             <label className="form-text mx-2">Text To Send in dm</label>
                             <input type="text" className="form-control m-2" width='100px' placeholder="Text Message" name="commentReplyText" value={commentDict.commentReplyText} onChange={(event:React.ChangeEvent)=>handleChange(event)}></input>
@@ -59,7 +60,7 @@ function MediaListItem(individualmedia:individualMedia){
                             <input type="text" className="form-control m-2" width='100px' placeholder="ButtonText" name="commentReplyButtonText" value={commentDict.commentReplyButtonText} onChange={(event:React.ChangeEvent)=>handleChange(event)}></input>
                             </form>
                         </div>
-                        <div className="col-6">
+                        <div className="col-sm-6">
                             <form className="form-group px-1 pt-2 d-grid justify-content-start">
                             <label className="form-text mx-2">Keyword in comment that triggers dm</label>
                             <input type="text" className="form-control m-2" width='100px' placeholder="keyword" name="keyword" value={commentDict.keyword} onChange={(event:React.ChangeEvent)=>handleChange(event)}></input>

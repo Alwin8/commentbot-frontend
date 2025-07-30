@@ -17,17 +17,17 @@ function HomePage(){
                     <span>instachimp</span>
                 </div>
                 <div className="col-6 d-flex align-items-center">
-                    <div className='mx-3 header' onClick={()=>setSelectedPage(1)}>
+                    <div className='mx-2 header' onClick={()=>setSelectedPage(1)}>
                       <img src="https://img.icons8.com/?size=100&id=73&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Home</span>
                     </div>
-                    <div className='mx-3 header' onClick={()=>setSelectedPage(2)}>
+                    <div className='mx-2 header' onClick={()=>setSelectedPage(2)}>
                       <img src="https://img.icons8.com/?size=100&id=2971&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Pricing</span>
                     </div>
-                    <div className='mx-3 header' onClick={()=>setSelectedPage(3)}>
+                    <div className='mx-2 header' onClick={()=>setSelectedPage(3)}>
                       <img src="https://img.icons8.com/?size=100&id=LeS5bIxWv2Kc&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Privacy Policy</span>

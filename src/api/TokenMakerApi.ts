@@ -1,7 +1,7 @@
 async function makeToken(code:string){
     const backend=import.meta.env.VITE_BACKEND
     const ApiUrl=backend+"/api/connectinstagram"
-    return fetch(ApiUrl,{
+    return await fetch(ApiUrl,{
         method: 'POST',
         headers: 
         {
@@ -13,6 +13,7 @@ async function makeToken(code:string){
         })
     })
     .then(response => {
+        console.log(response)
         if (!response.ok) throw new Error("Network response was not ok");
         const data=response.json()
         return data; // read response body

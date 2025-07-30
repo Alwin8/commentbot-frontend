@@ -41,7 +41,7 @@ function Dashboard(){
     return () => unsubscribe(); // Cleanup the listener
   }, []);
     return (
-        <div className="container-fluid fullviewport">
+        <div className="container-fluid pageviewport">
             <div className="row bg-light rounded " style={{ minHeight: '50px', width: '100vw' }}>
                 <div className="col-6 d-flex align-items-center">
                     <img src={logo} className="rounded logo" alt="logo" />
@@ -58,7 +58,7 @@ function Dashboard(){
                 <div className='col-2'>
                     <NavBar list={['Connect instagram','Comment Automation']} onSelect={(id)=>setSelectedItem(Number(id))}></NavBar>
                 </div>
-                <div className="col-8 my-5 d-flex justify-content-center align-items-center">
+                <div className="col-10 my-5 d-flex justify-content-center align-items-center">
                     {SelectedItem==0 && <FbConnect isFbConnected={dataList?.isFbConnected} isAuthenticated={dataList?.uid!=null}/>}
                     {SelectedItem==1 && <CommentAutomation token={dataList?.token} user_id={dataList?.user_id}/>}
                 </div>
