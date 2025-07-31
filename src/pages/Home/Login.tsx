@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import SignInWithGoogle from '../../components/signinwithgoogle';
 import Alert from '../../components/Alert';
 import { useNavigate } from 'react-router-dom';
 import LoginUser from '../../firebase/EditUser';
