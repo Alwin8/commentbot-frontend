@@ -39,7 +39,7 @@ function CommentAutomation(props: Props) {
       <div className="row">
             <div className="col">
                 <button className="btn btn-light" onClick={()=>pageNo>1 && setPageNo(pageNo-1)}>Prev Page</button>
-                <label className="text text-light m-3">{pageNo}</label>
+                <label className="text text-dark m-3">{pageNo}</label>
                 <button className="btn btn-light" onClick={()=>setPageNo(pageNo+1)}>Next Page</button>
             </div>
         </div>

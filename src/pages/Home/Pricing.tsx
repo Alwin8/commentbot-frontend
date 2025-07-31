@@ -1,4 +1,8 @@
-function Pricing(){
+type HomeProps = {
+    changePage: (page:number) => void;
+};
+
+function Pricing({ changePage }: HomeProps){
     return (
         <div className="bg-light rounded my-1">
   <div className="container py-5">
@@ -17,7 +21,7 @@ function Pricing(){
               <li>✘ 100 comment dm's per month</li>
               <li>✘ Have Watermark</li>
             </ul>
-            <a href="login" className="btn btn-outline-primary">Start for Free</a>
+            <a onClick={()=>changePage(4)} className="btn btn-outline-primary">Start for Free</a>
           </div>
         </div>
       </div>
@@ -31,7 +35,7 @@ function Pricing(){
               <li>✔ Unlimited comment replies</li>
               <li>✔ No watermark</li>
             </ul>
-            <a href="login" className="btn btn-primary">Choose Basic</a>
+            <a onClick={()=>changePage(4)} className="btn btn-primary">Choose Basic</a>
           </div>
         </div>
       </div>

@@ -1,0 +1,10 @@
+// Override Bootstrap variables BEFORE import
+$primary:       #D4AF37;  // Champagne Gold
+$secondary:     #8E8E93;  // Cool Gray
+$success:       #34C759;  // Emerald
+$dark:          #1C1C1E;  // Charcoal Black
+$body-bg:       #F8F8F7;  // Off-White
+$body-color:    #111111;  // Jet Black
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";

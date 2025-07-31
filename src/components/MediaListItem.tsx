@@ -48,9 +48,9 @@ function MediaListItem(individualmedia:individualMedia){
                     </div>
         </div>
         <div className="row p-2">
-                    <div className="rounded-bottom" style={{backgroundColor:'bisque',height: isOpen ? (isSmallPhone ? "650px" : "350px") : "0",transition: "height 0.5s ease",overflow: "hidden",}}>
+                    <div className="card-smal" style={{backgroundColor:'#EFEFF0',height: isOpen ? (isSmallPhone ? "700px" : "350px") : "0",transition: "height 0.5s ease",overflow: "hidden",}}>
                       <div className="row">
-                        <div className="col-sm-6">
+                        <div className="col-sm-6 d-flex justify-content-center">
                             <form className="form-group px-1 pt-2 d-grid justify-content-start">
                             <label className="form-text mx-2">Text To Send in dm</label>
                             <input type="text" className="form-control m-2" width='100px' placeholder="Text Message" name="commentReplyText" value={commentDict.commentReplyText} onChange={(event:React.ChangeEvent)=>handleChange(event)}></input>
@@ -60,7 +60,7 @@ function MediaListItem(individualmedia:individualMedia){
                             <input type="text" className="form-control m-2" width='100px' placeholder="ButtonText" name="commentReplyButtonText" value={commentDict.commentReplyButtonText} onChange={(event:React.ChangeEvent)=>handleChange(event)}></input>
                             </form>
                         </div>
-                        <div className="col-sm-6">
+                        <div className="col-sm-6 d-flex justify-content-center">
                             <form className="form-group px-1 pt-2 d-grid justify-content-start">
                             <label className="form-text mx-2">Keyword in comment that triggers dm</label>
                             <input type="text" className="form-control m-2" width='100px' placeholder="keyword" name="keyword" value={commentDict.keyword} onChange={(event:React.ChangeEvent)=>handleChange(event)}></input>

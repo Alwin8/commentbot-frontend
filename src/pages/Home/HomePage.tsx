@@ -10,31 +10,31 @@ function HomePage(){
     return (
     <div>
         <div className="container-fluid fullviewport">
-            <div className="row bg-light rounded " style={{ minHeight: '50px', width: '100vw' }}>
+            <div className="row bg-light rounded header" style={{ minHeight: '50px', width: '100vw' }}>
                 <div className="col-3 d-flex align-items-center">
                     <img src={logo} className="rounded logo" alt="logo" />
                     &nbsp;
-                    <span>instachimp</span>
+                    <span style={{ fontWeight: 700, color: '#D4AF37' }}>LinkBridge</span>
                 </div>
                 <div className="col-6 d-flex align-items-center">
-                    <div className='mx-2 header' onClick={()=>setSelectedPage(1)}>
+                    <div className='ms-2 m-sm-1 header-item rounded p-1' onClick={()=>setSelectedPage(1)}>
                       <img src="https://img.icons8.com/?size=100&id=73&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Home</span>
                     </div>
-                    <div className='mx-2 header' onClick={()=>setSelectedPage(2)}>
+                    <div className='ms-2 m-sm-1 header-item rounded p-1' onClick={()=>setSelectedPage(2)}>
                       <img src="https://img.icons8.com/?size=100&id=2971&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Pricing</span>
                     </div>
-                    <div className='mx-2 header' onClick={()=>setSelectedPage(3)}>
+                    <div className='ms-2 m-sm-1 header-item rounded p-1' onClick={()=>setSelectedPage(3)}>
                       <img src="https://img.icons8.com/?size=100&id=LeS5bIxWv2Kc&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Privacy Policy</span>
                     </div>
                 </div>
                 <div className='col-3 d-flex justify-content-end align-items-center'>
-                    <div className='mx-3 header' onClick={()=>setSelectedPage(4)}>
+                    <div className='me-2 m-sm-1 header-item rounded' onClick={()=>setSelectedPage(4)}>
                       <img src="https://img.icons8.com/?size=100&id=26218&format=png&color=000000" className="rounded logo" alt="user" />
                       &nbsp;
                       <span>Login</span>
@@ -42,10 +42,10 @@ function HomePage(){
                 </div>
             </div>
             <div className='row'>
-                {selectedPage==1 && (<Home></Home>)}
-                {selectedPage==2 && (<Pricing></Pricing>)}
+                {selectedPage==1 && (<Home changePage={(page)=>setSelectedPage(page)}></Home>)}
+                {selectedPage==2 && (<Pricing changePage={(page)=>setSelectedPage(page)}></Pricing>)}
                 {selectedPage==3 && (<PrivacyPolicy></PrivacyPolicy>)}
-                {selectedPage==4 && <LoginPage></LoginPage>}
+                {selectedPage==4 && (<LoginPage></LoginPage>)}
             </div>
         </div>
     </div>

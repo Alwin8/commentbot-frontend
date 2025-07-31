@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SignInWithGoogle from '../../components/signinwithgoogle';
 import Alert from '../../components/Alert';
 import { useNavigate } from 'react-router-dom';
@@ -17,9 +17,12 @@ function LoginPage(){
             setAlert(true);
           }
       }
+    useEffect(()=>{
+      handleSignIn()
+    },[])
     return (<div className='d-flex justify-content-center pageviewport d-flex align-items-center'>
       {isAlertOn && <Alert message={message} onClose={()=>setAlert(false)}/>}
-      <SignInWithGoogle onSignIn={()=>{handleSignIn()}}></SignInWithGoogle>
+      
       </div>
     )
 }

@@ -1,5 +1,6 @@
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import './theme.scss';
 import './App.css'
 import LoginPage from './pages/Home/Login';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
