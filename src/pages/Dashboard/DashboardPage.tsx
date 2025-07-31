@@ -41,12 +41,12 @@ function Dashboard(){
     return () => unsubscribe(); // Cleanup the listener
   }, []);
     return (
-        <div className="container-fluid pageviewport">
-            <div className="row bg-light rounded " style={{ minHeight: '50px', width: '100vw' }}>
+        <div className="container-fluid fullviewport">
+            <div className="row card-smal" style={{ minHeight: '50px', width: '100vw' }}>
                 <div className="col-6 d-flex align-items-center">
                     <img src={logo} className="rounded logo" alt="logo" />
                     &nbsp;
-                    <span>instachimp</span>
+                    <span style={{ fontWeight: 700, color: '#D4AF37' }}>LinkBridge</span>
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end">
                     <img src={dataList?.photoURL} className="rounded logo" alt="user" />

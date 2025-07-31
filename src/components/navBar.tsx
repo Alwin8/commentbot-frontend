@@ -15,7 +15,7 @@ function navBar(props:Props){
         props.onSelect(Number(id))
     }
    return (
-    <ul className='list-group list-group-action mt-4 px-2 rounded align-items-center' style={{backgroundColor:'lightblue',height:'80vh'}} onClick={(event:React.MouseEvent)=>handleSelect(event)} >
+    <ul className='list-group list-group-action mt-4 px-2 rounded align-items-center sidebar' style={{height:'80vh'}} onClick={(event:React.MouseEvent)=>handleSelect(event)} >
         {listElements.map((menu,index)=>(
             <li className={index==0 ? 'list-group-item list-group-item-action m-1 sidebar-item active' :'list-group-item list-group-item-action m-1 sidebar-item index'} id={index.toString()} key={index}>{menu}</li>
    ))

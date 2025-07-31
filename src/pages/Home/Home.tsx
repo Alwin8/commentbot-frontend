@@ -1,4 +1,8 @@
-function Home(){
+type HomeProps = {
+    changePage: (page:number) => void;
+};
+
+function Home({ changePage }: HomeProps){
     return (
         <div>
   <section className="py-5 text-center bg-white rounded m-2">
@@ -8,7 +12,7 @@ function Home(){
         Save time and engage your audience with our smart comment bot. No code. No hassle.
       </p>
       <div className="mt-4">
-        <a href="login" className="btn btn-primary btn-lg">Get Started</a>
+        <a onClick={()=>changePage(4)} className="btn btn-primary btn-lg">Get Started</a>
       </div>
     </div>
   </section>
@@ -16,19 +20,19 @@ function Home(){
     <div className="container">
       <div className="row g-4 text-center">
         <div className="col-md-4">
-          <div className="bg-white p-4 rounded shadow-sm h-100">
+          <div className="card">
             <h5>✅ Fast DM</h5>
             <p className="text-muted">Automatically respond to comments with predefined messages and link without any delay.</p>
           </div>
         </div>
         <div className="col-md-4">
-          <div className="bg-white p-4 rounded shadow-sm h-100">
+          <div className="card">
             <h5>⚙️ Easy Setup</h5>
             <p className="text-muted">Connect your Instagram in seconds. No coding skills needed.</p>
           </div>
         </div>
         <div className="col-md-4">
-          <div className="bg-white p-4 rounded shadow-sm h-100">
+          <div className="card">
             <h5>More Instagram Engagement</h5>
             <p className="text-muted">Sharing links through comments help increase instagram engagement and reach</p>
           </div>

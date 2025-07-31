@@ -8,7 +8,26 @@
 
 .card {
   padding: 2em;
+  background-color: #FFFFFF;
+  border: 1px solid #D4AF37;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* soft shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
 }
+.card-smal {
+  background-color: #FFFFFF;
+  border: 1px solid #D4AF37;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* soft shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
 
 .read-the-docs {
   color: #888;

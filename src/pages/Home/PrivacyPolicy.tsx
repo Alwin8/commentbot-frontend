@@ -1,6 +1,6 @@
 function PrivacyPolicy(){
     return (
-  <div className="container py-5 text-light text-start">
+  <div className="container py-5 text text-start">
     <h1 className="mb-4">Privacy Policy</h1>
     <p className="text-muted">Last updated: July 26, 2025</p>
 
