@@ -11,6 +11,7 @@ import NavBar from '../../components/navBar';
 import CommentAutomation from './CommentAutomation';
 import createUserInDatabase, { updateFbConnection, updateFbToken, updateFbUserId } from '../../firebase/EditUser';
 import makeToken from '../../api/TokenMakerApi';
+import PlanPage from './PlanPage';
 function Dashboard(){
     const [dataList, setDataList] = useState<DocumentData>();
     const [SelectedItem, setSelectedItem] = useState(0);
@@ -56,11 +57,12 @@ function Dashboard(){
             </div>
             <div className='row mt-0'>
                 <div className='col-2'>
-                    <NavBar list={['Connect instagram','Comment Automation']} onSelect={(id)=>setSelectedItem(Number(id))}></NavBar>
+                    <NavBar list={['Connect instagram','Comment Automation','Plan']} onSelect={(id)=>setSelectedItem(Number(id))}></NavBar>
                 </div>
                 <div className="col-10 my-5 d-flex justify-content-center align-items-center">
                     {SelectedItem==0 && <FbConnect isFbConnected={dataList?.isFbConnected} isAuthenticated={dataList?.uid!=null}/>}
                     {SelectedItem==1 && <CommentAutomation token={dataList?.token} user_id={dataList?.user_id}/>}
+                    {SelectedItem==2 && <PlanPage/>}
                 </div>
             </div>
             </div>)

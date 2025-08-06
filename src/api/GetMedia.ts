@@ -15,7 +15,9 @@ async function GetMedia(token:string,page:string){
     })
     .then(async response => {
         if (!response.ok) throw new Error("Network response was not ok");
-        const data:{'data':[],'paging':{cursors:{after:'',before:''}}}=await response.json()
+        const respons=await response.json();
+        const data: { data: []; paging: { cursors: { after: string; before: string } }; error?: string }  = respons
+        if(respons[0]=='error') throw new Error ('Instagram Connection Error')
         return data // read response body
     })
 
