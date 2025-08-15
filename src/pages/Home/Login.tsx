@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import {useState } from 'react'
 import Alert from '../../components/Alert';
 import { useNavigate } from 'react-router-dom';
 import LoginUser from '../../firebase/EditUser';
 import { auth, googleProvider } from '../../firebase/config';
-import { onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 function LoginPage(){
     const [message,setMessage]=useState("")
       const [isAlertOn,setAlert]=useState(false)

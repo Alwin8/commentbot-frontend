@@ -28,7 +28,7 @@ function Home({ changePage }: HomeProps){
         <div className="col-md-4">
           <div className="card">
             <h5>⚙️ Easy Setup</h5>
-            <p className="text-muted">Connect your Instagram in seconds. No coding skills needed.</p>
+            <p className="text-muted">Connect your Instagram in seconds. No coding skills needed.</p><br></br>
           </div>
         </div>
         <div className="col-md-4">

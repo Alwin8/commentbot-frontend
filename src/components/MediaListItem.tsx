@@ -27,7 +27,6 @@ function MediaListItem(individualmedia: individualMedia) {
     isReplyNeeded:false,
     replyText:""
   });
-  const isSmallPhone = window.innerWidth <= 480;
   const handleDropdownClick = async () => {
     setOpen(!isOpen);
     const comment = (await getcommentDm(

@@ -20,7 +20,8 @@ function PrivacyPolicy(){
       <li>Provide and maintain our service</li>
       <li>Notify you about changes</li>
       <li>Improve the user experience</li>
-      <li>Send updates or promotional content (only with your consent)</li>
+      <li>Send updates</li>
+      <li>send promotional content (only with your consent)</li>
     </ul>
 
     <h3>3. Data Sharing and Disclosure</h3>
@@ -32,8 +33,8 @@ function PrivacyPolicy(){
     <h3>5. Data Security</h3>
     <p>We use reasonable security measures to protect your personal data. However, no method of transmission over the internet is 100% secure.</p>
 
-    <h3>6. Your Rights</h3>
-    <p>You may have rights under applicable laws, such as accessing, updating, or deleting your data. Contact us for any data-related requests.</p>
+    <h3>6. Your Rights and Data Deletion</h3>
+    <p>You may have rights under applicable laws, such as accessing, updating, or deleting your data. Contact us for any data-related requests through email address lionpswn@gmail.com.</p>
 
     <h3>7. Changes to This Policy</h3>
     <p>We may update this Privacy Policy from time to time. We'll notify you of changes by posting the new version on this page.</p>
