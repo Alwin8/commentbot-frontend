@@ -27,4 +27,8 @@ export const updateFbUserId=(user:User,user_id:string)=>{
   const userRef = doc(db, "usersWeb", user.uid);
   setDoc(userRef,{'user_id':user_id},{merge:true})
 }
+export const updateUser=(user:User,token:string,user_id:string,user_name:string,user_image:string)=>{
+  const userRef = doc(db, "usersWeb", user.uid);
+  setDoc(userRef,{'token':token,'user_id':user_id,'user_name':user_name,'user_image':user_image,'isFbConnected':true},{merge:true})
+}
 export default createUserInDatabase;

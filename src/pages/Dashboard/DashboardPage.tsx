@@ -4,12 +4,12 @@ import { type DocumentData } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import GetUser from "../../firebase/GetUserData";
 import FbConnect from './fbConnect';
-import {useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { auth } from '../../firebase/config';
 import { onAuthStateChanged } from 'firebase/auth';
 import NavBar from '../../components/navBar';
 import CommentAutomation from './CommentAutomation';
-import createUserInDatabase, { updateFbConnection, updateFbToken, updateFbUserId } from '../../firebase/EditUser';
+import createUserInDatabase, {updateUser } from '../../firebase/EditUser';
 import makeToken from '../../api/TokenMakerApi';
 import PlanPage from './PlanPage';
 function Dashboard(){
@@ -23,11 +23,9 @@ function Dashboard(){
       if (user) {
         await createUserInDatabase(user)
         if(code!=null){
-          updateFbConnection(user)
           const token=await makeToken(code)
           if(token!="error"){
-            updateFbToken(user,token[0])
-            updateFbUserId(user,token[1])
+            updateUser(user,token[0],token[1],token[2],token[3])
           }else{
             alert('error')
           }
@@ -60,7 +58,7 @@ function Dashboard(){
                     <NavBar list={['Connect instagram','Comment Automation','Plan']} onSelect={(id)=>setSelectedItem(Number(id))}></NavBar>
                 </div>
                 <div className="col-10 my-5 d-flex justify-content-center align-items-center">
-                    {SelectedItem==0 && <FbConnect isFbConnected={dataList?.isFbConnected} isAuthenticated={dataList?.uid!=null}/>}
+                    {SelectedItem==0 && <FbConnect datalist={dataList}/>}
                     {SelectedItem==1 && <CommentAutomation token={dataList?.token} user_id={dataList?.user_id}/>}
                     {SelectedItem==2 && <PlanPage/>}
                 </div>
