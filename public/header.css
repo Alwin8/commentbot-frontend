@@ -1,0 +1,13 @@
+.header-item:hover{
+  /* color: #007bff; or any hover color */
+  background-color: #D4AF37;
+  border-bottom: 2px solid #007bff;
+}
+.header{
+  border-bottom: 2px solid #D4AF37;
+}
+.logo{
+  width:24px;
+  height: 24px;
+  background-color: transparent;
+}

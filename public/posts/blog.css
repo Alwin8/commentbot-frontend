@@ -1,0 +1,50 @@
+ body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f8f8f7;
+        color: #111111;
+      }
+
+      .blog-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1c1c1e;
+      }
+
+      .blog-meta {
+        font-size: 0.95rem;
+        color: #8e8e93;
+      }
+
+      .blog-content h2 {
+        font-size: 1.75rem;
+        color: #1c1c1e;
+        margin-top: 2rem;
+      }
+
+      .cta-button {
+        background-color: #d4af37;
+        border: none;
+        color: #111;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        transition: background 0.2s ease-in-out;
+      }
+
+      .cta-button:hover {
+        background-color: #c9a532;
+        color: #000;
+      }
+
+      .blog-footer {
+        font-size: 0.85rem;
+        color: #8e8e93;
+        border-top: 1px solid #e2e2e2;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+      }
+
+      a.cta-link {
+        color: #8e8e93;
+        text-decoration: underline;
+      }

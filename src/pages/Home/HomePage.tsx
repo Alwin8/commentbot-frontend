@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../../assets/logo.jpg'
 import '../Home/Home.css'
 import LoginPage from './Login'
 import PrivacyPolicy from './PrivacyPolicy'
 import Home from './Home'
 import Pricing from './Pricing'
-function HomePage(){
+import BlogPage from './BlogPage'
+interface HomePageProps {
+    page: number;
+}
+
+function HomePage({page}: HomePageProps){
     const [selectedPage,setSelectedPage]=useState(1)
+    useEffect(()=>{
+      setSelectedPage(page)
+    },[])
     return (
     <div>
         <div className="container-fluid fullviewport">
@@ -46,6 +54,7 @@ function HomePage(){
                 {selectedPage==2 && (<Pricing changePage={(page)=>setSelectedPage(page)}></Pricing>)}
                 {selectedPage==3 && (<PrivacyPolicy></PrivacyPolicy>)}
                 {selectedPage==4 && (<LoginPage></LoginPage>)}
+                {selectedPage==5 && (<BlogPage></BlogPage>)}
             </div>
         </div>
     </div>

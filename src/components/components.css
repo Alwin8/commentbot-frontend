@@ -16,3 +16,31 @@
 .sidebar{
   background-color: #E8E8EA;
 }
+.blog-post-preview {
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.blog-post-preview:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+}
+
+.preview-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 0.5rem 0;
+}
+
+.preview-meta {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
