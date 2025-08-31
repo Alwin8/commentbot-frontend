@@ -4,7 +4,7 @@ type HomeProps = {
 
 function Home({ changePage }: HomeProps){
     return (
-        <div>
+<div>
   <section className="py-5 text-center bg-white rounded m-2">
     <div className="container">
       <h1 className="display-4 fw-bold">Automate Your Instagram Comments</h1>
@@ -12,7 +12,7 @@ function Home({ changePage }: HomeProps){
         Save time and engage your audience with our smart comment bot. No code. No hassle.
       </p>
       <div className="mt-4">
-        <a onClick={()=>changePage(4)} className="btn btn-primary btn-lg">Get Started</a>
+        <button onClick={()=>changePage(4)} className="btn btn-primary btn-lg">Get Started</button>
       </div>
     </div>
   </section>
@@ -21,20 +21,20 @@ function Home({ changePage }: HomeProps){
       <div className="row g-4 text-center">
         <div className="col-md-4">
           <div className="card">
-            <h5>✅ Fast DM</h5>
-            <p className="text-muted">Automatically respond to comments with predefined messages and link without any delay.</p>
+            <h2 className="h5">Instant Instagram Auto-Reply</h2><br></br>
+            <p className="text-muted">Reply to comments immediately with custom DMs and links to boost engagement and conversions.</p><br></br>
           </div>
         </div>
         <div className="col-md-4">
           <div className="card">
-            <h5>⚙️ Easy Setup</h5>
-            <p className="text-muted">Connect your Instagram in seconds. No coding skills needed.</p><br></br>
+            <h2 className="h5">No-Code Instagram Integration</h2><br></br>
+            <p className="text-muted">Connect your Instagram in seconds — no coding skills required. Start automating replies with just a few clicks.</p><br></br>
           </div>
         </div>
         <div className="col-md-4">
           <div className="card">
-            <h5>More Instagram Engagement</h5>
-            <p className="text-muted">Sharing links through comments help increase instagram engagement and reach</p>
+            <h2 className="h5">Grow Instagram Engagement & Reach</h2>
+            <p className="text-muted">Boost your reach by replying with links and CTAs directly in your Instagram comments. More interaction = more visibility.</p>
           </div>
         </div>
       </div>

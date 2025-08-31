@@ -7,8 +7,13 @@ function BlogPage(){
         <BlogComponent
         className="d-grid align-content-center justify-content-start"
         title="Boost Instagram Engagement: Automatically Send Links to Commenters with LinkBridge"
-        link="/posts/blog.html"
+        link="/posts/linkbridge-instagram-automation.html"
         date="8/28/2025"/>
+        <BlogComponent
+        className="d-grid align-content-center justify-content-start"
+        title="ManyChat vs LinkBridge: Which Instagram Automation Tool is Best for You?"
+        link="/posts/ManyChat-vs-LinkBridge.html"
+        date="8/31/2025"/>
         </div>
     )
 }

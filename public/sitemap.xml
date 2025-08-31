@@ -14,7 +14,7 @@
 <url>
 	<loc>https://linkbridgebot.vercel.app/pricing</loc>
 	<lastmod>2025-08-28T08:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+	<priority>0.9</priority>
 </url>
 <url>
 	<loc>https://linkbridgebot.vercel.app/blog</loc>
@@ -29,16 +29,21 @@
 <url>
 	<loc>https://linkbridgebot.vercel.app/dashboard</loc>
 	<lastmod>2025-08-28T08:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://linkbridgebot.vercel.app/privacy-policy</loc>
 	<lastmod>2025-08-28T08:31:26+01:00</lastmod>
-	<priority>1.0</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://linkbridgebot.vercel.app/login</loc>
 	<lastmod>2025-08-28T08:31:26+01:00</lastmod>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>https://linkbridgebot.vercel.app/posts/ManyChat-vs-LinkBridge.html</loc>
+	<lastmod>2025-08-31T08:31:26+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 </urlset>
