@@ -60,7 +60,7 @@ function Dashboard(){
                 <div className="col-10 my-5 d-flex justify-content-center align-items-center">
                     {SelectedItem==0 && <FbConnect datalist={dataList}/>}
                     {SelectedItem==1 && <CommentAutomation token={dataList?.token} user_id={dataList?.user_id}/>}
-                    {SelectedItem==2 && <PlanPage/>}
+                    {SelectedItem==2 && <PlanPage dataList={dataList}/>}
                 </div>
             </div>
             </div>)
