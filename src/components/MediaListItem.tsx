@@ -21,7 +21,7 @@ function MediaListItem(individualmedia: individualMedia) {
     commentDmButtonUrl: "",
     commentDmText: "",
     FollowButtonText: "",
-    isFollowMust: true,
+    isFollowMust: false,
     keyword: "",
     isDmNeeded: false,
     isReplyNeeded:false,

@@ -72,6 +72,7 @@ function PlanPage(props:Props){
         >
           1 Year
         </button>
+        
       </div>
 
       <div style={styles.planCard}>
@@ -79,6 +80,8 @@ function PlanPage(props:Props){
         <p style={styles.price}>{plans[selectedPlan].price}</p>
         <button className="btn btn-primary" onClick={()=>handlePayment('basic')}>pay</button>
       </div>
+      <br></br>
+      <h6>Pay only after connecting Instagram</h6>
     </div>
   );
 
