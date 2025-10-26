@@ -1,23 +1,29 @@
 interface Props{
-    list:string[]
+    list:{title:string,logo:string}[]
     onSelect:(id:Number)=>void
 }
 function navBar(props:Props){
     const listElements=props.list
+    const checkMobile = window.innerWidth<800
     const handleSelect=(event:React.MouseEvent)=>{
-        const tag=event.target as HTMLLIElement
+        console.log("ji")
+        const clickedItem=event.target as HTMLLIElement
+        const listItem=clickedItem.closest("li")
         const items = document.querySelectorAll('.sidebar-item');
     items.forEach((item) => {
       item.classList.remove('active');
     });
-        tag.classList.add('active')
-        const id = tag.id ?? "0"
+        listItem?.classList.add('active')
+        const id = listItem?.id ?? "0"
         props.onSelect(Number(id))
     }
    return (
-    <ul className='list-group list-group-action mt-4 px-2 rounded align-items-center sidebar' style={{height:'80vh'}} onClick={(event:React.MouseEvent)=>handleSelect(event)} >
+    <ul className='list-group list-group-action mt-4 px-2 rounded align-items-center sidebar' style={{height:'80vh',minWidth:'15vw'}}  >
         {listElements.map((menu,index)=>(
-            <li className={index==0 ? 'list-group-item list-group-item-action m-1 sidebar-item active' :'list-group-item list-group-item-action m-1 sidebar-item index'} id={index.toString()} key={index}>{menu}</li>
+            <li className={index==0 ? 'list-group-item list-group-item-action m-1 sidebar-item active align-items-center' :'list-group-item list-group-item-action m-1 sidebar-item index align-items-center'} id={index.toString()} key={index} onClick={(event:React.MouseEvent)=>handleSelect(event)}>
+                <img src={menu.logo} className="logo"></img>
+                <div className={checkMobile? 'd-none' : 'd-block'}>{menu.title}</div>
+                </li>
    ))
         }
     </ul>

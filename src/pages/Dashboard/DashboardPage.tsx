@@ -55,7 +55,7 @@ function Dashboard(){
             </div>
             <div className='row mt-0'>
                 <div className='col-2'>
-                    <NavBar list={['Connect instagram','Comment Automation','Plan']} onSelect={(id)=>setSelectedItem(Number(id))}></NavBar>
+                    <NavBar list={[{title:'Connect instagram',logo:'https://img.icons8.com/?size=100&id=eRJfQw0Zs44S&format=png&color=000000'},{title:'Comment Automation',logo:'https://img.icons8.com/?size=100&id=38977&format=png&color=000000'},{title:'Plan',logo:'https://img.icons8.com/?size=100&id=48805&format=png&color=000000'}]} onSelect={(id)=>setSelectedItem(Number(id))}></NavBar>
                 </div>
                 <div className="col-10 my-5 d-flex justify-content-center align-items-center">
                     {SelectedItem==0 && <FbConnect datalist={dataList}/>}

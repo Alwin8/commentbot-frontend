@@ -30,7 +30,7 @@ function Pricing({ changePage }: HomeProps){
         <div className="card h-80 text-center shadow border-primary">
           <div className="card-body">
             <h5 className="card-title text-primary">Basic</h5>
-            <h2 className="card-price text-primary">$10 <small className="text-muted">/mo</small></h2>
+            <h2 className="card-price text-primary">$12 <small className="text-muted">/mo</small></h2>
             <ul className="list-unstyled my-4">
               <li>✔ Unlimited comment replies</li>
               <li>✔ No watermark</li>

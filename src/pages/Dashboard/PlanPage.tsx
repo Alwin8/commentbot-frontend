@@ -31,7 +31,7 @@ function PlanPage(props:Props){
       const script = document.createElement('script');
       script.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';  // Replace with actual URL
       script.onload = () => {
-        setCashFree(Cashfree({mode:'production'}));
+        setCashFree(Cashfree({mode:'sandbox'}));
       };
       document.body.appendChild(script);
 
