@@ -3,12 +3,14 @@ import MediaList from "../../components/MediaList";
 import Progressbar from "../../components/progressbar";
 import GetMedia from "../../api/GetMedia";
 import AddCommentAutomation from "../../firebase/ManageCommentAutomation";
+import Alert from "../../components/Alert";
 interface Props {
   token: string;
   user_id: string;
 }
 function CommentAutomation(props: Props) {
   const [isLoading, setLoading] = useState(false);
+  const [noMedia, setNoMedia] = useState(false);
   const [medialist, setMediaList] = useState([]);
   const [page, setPage] = useState([""]);
   const [pageNo, setPageNo] = useState(1);
@@ -17,6 +19,12 @@ function CommentAutomation(props: Props) {
       if(!isLoading){
       setLoading(true);
       const media = await GetMedia(props.token, page[pageNo - 1]);
+      if(media.data.length==0){
+        console.log("empty")
+        setLoading(false);
+        setNoMedia(true)
+        return
+      }
       setMediaList(media.data);
       const after: string = media.paging.cursors["after"];
       setPage((prev) => [...prev, after]);
@@ -36,6 +44,7 @@ function CommentAutomation(props: Props) {
         }
       />
       {isLoading && <Progressbar></Progressbar>}
+      {noMedia && <Alert message="No media Found" onClose={()=>{}}></Alert>}
       <div className="row">
             <div className="col">
                 <button className="btn btn-light" onClick={()=>pageNo>1 && setPageNo(pageNo-1)}>Prev Page</button>
